@@ -9,7 +9,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "^7.1",
+        "laravel": "^5.7"
+    },
     "autoload": {
         "psr-4": {
             "singhshivkumar90\\contactform\\": "src/"
