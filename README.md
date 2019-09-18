@@ -7,6 +7,8 @@ A package for contact form in any website built with laravel.
 To get started with it, simply run:
 
     composer require singhshivkumar90/contactform
+    
+    php artisan migrate
 
 ## In case you want to modify the views
 
