@@ -1,9 +1,13 @@
-A basic package for contact form in any website.
+## Introduction
 
-**Package built with** Laravel
+A package for contact form in any website built with laravel.
 
-In case you want to modify the views, you can do the following
+## Installation
 
-run the php artisan **vendor:publish command**, 
+To get started with it, simply run:
 
-Laravel copies the views from packages to resources/views/vendor/contactform of your application.
+    composer require singhshivkumar90/contactform
+
+## In case you want to modify the views
+
+From your console, execute the `php artisan vendor:publish` command.
