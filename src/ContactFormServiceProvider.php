@@ -28,7 +28,7 @@ class ContactFormServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/Database/migrations');
 
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('resources/views/vendor/contactform')
+            __DIR__.'/resources/views' => resource_path('views/vendor/contactform')
         ]);
     }
 }
