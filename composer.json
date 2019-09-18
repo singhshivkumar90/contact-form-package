@@ -26,6 +26,6 @@
             "providers": [
                 "singhshivkumar90\\contactform\\ContactFormServiceProvider"
             ]
-        },
+        }
     }    
 }
