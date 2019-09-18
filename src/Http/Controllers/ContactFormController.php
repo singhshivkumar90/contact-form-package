@@ -1,10 +1,10 @@
 <?php
 
-namespace shiv\contactform\Http\Controllers;
+namespace singhshivkumar90\contactform\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use shiv\contactform\Models\ContactForm;
+use singhshivkumar90\contactform\Models\ContactForm;
 
 class ContactFormController extends Controller
 {
@@ -26,6 +26,12 @@ class ContactFormController extends Controller
      */
     public function sendMail(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'message' => 'required'
+        ]);
+
         ContactForm::create($request->all());
 
         return redirect(route('contact'))

@@ -8,35 +8,44 @@
     <title>Contact Us</title>
 </head>
 <body>
+    <div style="width: 500px; margin: 0 auto; margin-top: 90px;">
+        @if(session('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
 
-<div style="width: 500px; margin: 0 auto; margin-top: 90px;">
-    @if(session('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-    <h3>Contact Us</h3>
+        <h3>Contact Us</h3>
 
-    <form action="{{route('contact')}}" method="POST">
-        @csrf
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Your name</label>
-            <input type="text" class="form-control" name="name" id="exampleFormControlInput" placeholder="name" required="required">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com" required="required">
-        </div>
+        <form action="{{route('contact')}}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Your name</label>
+                <input type="text" class="form-control" name="name" id="exampleFormControlInput" placeholder="name" required="required">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com" required="required">
+            </div>
 
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Enter Your Message</label>
-            <textarea class="form-control"name="message" id="exampleFormControlTextarea1" rows="3" required="required"></textarea>
-        </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter Your Message</label>
+                <textarea class="form-control"name="message" id="exampleFormControlTextarea1" rows="3" required="required"></textarea>
+            </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
 

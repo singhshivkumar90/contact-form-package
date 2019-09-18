@@ -1,6 +1,6 @@
 <?php
 
-namespace shiv\contactform\Models;
+namespace singhshivkumar90\contactform\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
