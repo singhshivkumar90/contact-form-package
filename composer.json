@@ -1,0 +1,18 @@
+{
+    "name": "shiv/contactform",
+    "description": "contact form package development",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shiv Kumar Singh",
+            "email": "singhshivkumar90@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "shiv\\contactform\\": "src/"
+        }
+    }
+}
