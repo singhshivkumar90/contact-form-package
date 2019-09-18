@@ -20,5 +20,12 @@
         "psr-4": {
             "singhshivkumar90\\contactform\\": "src/"
         }
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "singhshivkumar90\\contactform\\ContactFormServiceProvider"
+            ]
+        },
+    }    
 }
