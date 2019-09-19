@@ -35,6 +35,6 @@ class ContactFormController extends Controller
         ContactForm::create($request->all());
 
         return redirect(route('contact'))
-            ->with(['message' => 'Thank you, your mail has been sent successfully.']);;
+            ->with(['message' => 'Thank you, your mail has been sent successfully.']);
     }
 }
